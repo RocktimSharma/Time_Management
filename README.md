@@ -10,3 +10,7 @@ The application comes with the following features:
   2.Add Reminder
   3.Help Focus
   4.Track Daily Activities with the help of Routines
+  
+**Splash Screen**
+  ![alt text](https://drive.google.com/file/d/1OlpvUx5fVgTLnQ-7kSUvrfrXRAc8awh0/view?usp=sharing)
+  
