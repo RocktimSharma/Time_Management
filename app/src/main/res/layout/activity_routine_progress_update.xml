@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".routines.RoutineProgressUpdateActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primaryBackgroundColor"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/routine_progress_update_task_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center"
+            android:text="Title"
+            android:textColor="@color/textColor"
+            android:textSize="36sp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/routine_progress_update_task_countdown_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:text="00:00"
+                android:textColor="@color/highlightColor"
+                android:textSize="30sp" />
+
+            <ProgressBar
+                android:id="@+id/routine_progress_update_task_progress_bar"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:indeterminateOnly="false"
+                android:progress="100"
+                android:progressDrawable="@drawable/progress_bar"
+                tools:progress="100" />
+        </RelativeLayout>
+
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:text="Planned Start Time"
+                android:textColor="@color/textColor"
+                app:layout_column="0"
+                app:layout_columnWeight="1"
+
+                app:layout_row="0"
+                app:layout_rowWeight="1" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:text="Planned End time"
+                android:textColor="@color/textColor"
+                app:layout_column="1"
+                app:layout_columnWeight="1"
+                app:layout_row="0"
+                app:layout_rowWeight="1" />
+
+            <TextView
+                android:id="@+id/routine_progress_update_task_start_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:text="08:45 AM"
+                android:textColor="@color/highlightColor"
+                android:textSize="18sp"
+                app:layout_column="0"
+                app:layout_columnWeight="1"
+                app:layout_row="1"
+                app:layout_rowWeight="1" />
+
+            <TextView
+                android:id="@+id/routine_progress_update_task_end_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:text="10:00 PM"
+                android:textColor="@color/highlightColor"
+                android:textSize="18sp"
+                app:layout_column="1"
+                app:layout_columnWeight="1"
+                app:layout_row="1"
+                app:layout_rowWeight="1" />
+        </androidx.gridlayout.widget.GridLayout>
+
+        <TextView
+            android:id="@+id/routine_progress_update_status_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="40dp"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/textColor"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/routine_progress_update_task_start_now_btn"
+            style="@android:style/Widget.DeviceDefault.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/rouned_outlined_ectangle"
+            android:text="Start Now"
+            android:textColor="@color/highlightColor"
+            android:textSize="18sp"
+            android:typeface="monospace"
+            app:backgroundTint="@null"
+            app:cornerRadius="10dp" />
+
+        <Button
+            android:id="@+id/routine_progress_update_task_end_btn"
+            style="@android:style/Widget.DeviceDefault.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/rouned_outlined_ectangle"
+            android:text="End"
+            android:textColor="@color/anakiwa"
+            android:textSize="18sp"
+            android:typeface="monospace"
+            app:backgroundTint="@null"
+            app:cornerRadius="10dp"
+            tools:visibility="gone" />
+
+        <Button
+            android:id="@+id/routine_progress_update_task_skip_btn"
+            style="@android:style/Widget.DeviceDefault.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rouned_outlined_ectangle"
+            android:text="Skip"
+            android:textColor="@color/highlightColor"
+            android:textSize="18sp"
+            android:typeface="monospace"
+            app:backgroundTint="@null"
+            app:cornerRadius="10dp" />
+
+        <Button
+            android:id="@+id/routine_progress_update_task_extend_time_btn"
+            style="@android:style/Widget.DeviceDefault.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/rouned_outlined_ectangle"
+            android:text="15 min more"
+            android:textColor="@color/highlightColor"
+            android:textSize="18sp"
+            android:typeface="monospace"
+            app:backgroundTint="@null"
+            app:cornerRadius="10dp" />
+
+        <Button
+            android:id="@+id/routine_progress_update_task_done_btn"
+            style="@android:style/Widget.DeviceDefault.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/rouned_outlined_ectangle"
+            android:text="Done"
+            android:textColor="@color/highlightColor"
+            android:textSize="18sp"
+            android:typeface="monospace"
+            app:backgroundTint="@null"
+            app:cornerRadius="10dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="40dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat"
+                android:text="Help Focus"
+                android:textColor="@color/bittersweet"
+                android:textSize="18sp" />
+
+            <Switch
+                android:id="@+id/routine_progress_update_task_focus_sw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:thumb="@drawable/switch_thumb"
+                android:track="@drawable/switch_track" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/routine_progress_update_info_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:drawableLeft="@drawable/ic_error"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center_vertical"
+            android:text="Stay on this page"
+            android:textColor="@color/secondaryTextColor"
+            android:visibility="visible" />
+    </LinearLayout>
+
+
+</FrameLayout>

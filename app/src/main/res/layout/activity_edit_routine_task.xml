@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryBackgroundColor"
+    tools:context=".routines.EditRoutineTask">
+
+    <LinearLayout
+        android:id="@+id/edit_routineTask_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/edit_routineTask_cancel_imbtn"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            android:scaleType="fitStart"
+            android:src="@drawable/close_icon" />
+
+        <TextView
+            android:id="@+id/edit_routineTask-txtvw"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Routine Task"
+            android:textColor="@color/textColor"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:autoSizeTextType="none"
+            app:fontFamily="@font/roboto_bold" />
+
+        <TextView
+            android:id="@+id/edit_routineTask_save_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            android:gravity="right|center_vertical"
+            android:text="Save"
+            android:textColor="@color/highlightColor"
+            android:textSize="14sp"
+            app:fontFamily="@font/montserrat" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/edit_routineTask_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/edit_routineTask_toolbar"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edit_routineTask_title_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:clickable="true"
+            android:hint="Title"
+            android:textColorHint="@color/secondaryTextColor"
+            app:boxStrokeColor="@color/text_input_layout_stroke_color"
+            app:boxStrokeErrorColor="@color/bittersweet"
+            app:errorIconDrawable="@drawable/ic_error"
+            app:errorTextColor="@color/bittersweet"
+            app:hintTextColor="@color/secondaryTextColor">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_routineTask_title_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:maxEms="1"
+                android:maxLength="15"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/textColor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edit_routineTask_start_time_input_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:clickable="false"
+                android:hint="Start Time"
+                android:textColorHint="@color/secondaryTextColor"
+                app:boxStrokeColor="@color/text_input_layout_stroke_color"
+                app:boxStrokeErrorColor="@color/bittersweet"
+                app:errorIconDrawable="@drawable/ic_error"
+                app:errorTextColor="@color/bittersweet"
+                app:hintTextColor="@color/secondaryTextColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_routineTask_start_time_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:clickable="true"
+                    android:editable="false"
+                    android:focusableInTouchMode="false"
+                    android:maxLines="1"
+                    android:textColor="@color/textColor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edit_routineTask_end_time_input_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:hint="End Time"
+                android:textColorHint="@color/secondaryTextColor"
+                app:boxStrokeColor="@color/text_input_layout_stroke_color"
+                app:boxStrokeErrorColor="@color/bittersweet"
+                app:errorIconDrawable="@drawable/ic_error"
+                app:errorTextColor="@color/bittersweet"
+                app:hintTextColor="@color/secondaryTextColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_routineTask_end_time_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:editable="true"
+                    android:focusableInTouchMode="false"
+                    android:maxLines="1"
+                    android:textColor="@color/textColor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:hint="Note"
+            android:textColorHint="@color/secondaryTextColor"
+            app:boxStrokeColor="@color/text_input_layout_stroke_color"
+            app:boxStrokeErrorColor="@color/bittersweet"
+            app:errorIconDrawable="@drawable/ic_error"
+            app:errorTextColor="@color/bittersweet"
+            app:hintTextColor="@color/secondaryTextColor">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_routineTask_note_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:lines="3"
+                android:maxLength="75"
+                android:maxLines="3"
+                android:textColor="@color/textColor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/edit_routineTask_alarm_sw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Alarm"
+            android:textColor="@color/supernova"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:thumb="@drawable/switch_thumb"
+            android:typeface="serif"
+            app:track="@drawable/switch_track">
+
+        </androidx.appcompat.widget.SwitchCompat>
+    </LinearLayout>
+
+</RelativeLayout>

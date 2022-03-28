@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryBackgroundColor">
+
+
+    <TextView
+        android:id="@+id/routine_frag_my_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="My"
+        android:textColor="@color/supernova"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/routine_frag_routine_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/routine_frag_my_tv"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Routines"
+        android:textColor="@color/textColor"
+        android:textSize="30sp" />
+
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/ic_more_vert" />
+
+    <SearchView
+        android:id="@+id/routine_frag_search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/routine_frag_routine_tv"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/round_rectangle"
+        android:searchIcon="@drawable/ic_search_icon" />
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/routine_frag_recycler_view2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/routine_frag_search_view"
+        tools:listitem="@layout/routine_recyclerview_layout">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/routine_frag_add_routine_fab"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="@color/blue"
+        android:clickable="true"
+        android:elevation="10dp"
+        app:backgroundTint="@color/blue"
+        app:srcCompat="@drawable/add_icon" />
+
+</RelativeLayout>

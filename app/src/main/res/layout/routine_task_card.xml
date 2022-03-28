@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:layout_margin="20dp"
+    android:orientation="horizontal"
+    app:cardBackgroundColor="@color/secondaryBackgroundColor"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="-40dp"
+            android:layout_marginRight="-10dp"
+            app:srcCompat="@drawable/blue_circle" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="-40dp"
+            android:layout_marginBottom="-40dp"
+            app:srcCompat="@drawable/yellow_circle" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="10dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="7dp">
+
+                <View
+                    android:id="@+id/routine_task_recycler_divider"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/divider"
+                    android:layerType="software" />
+
+                <TextView
+                    android:id="@+id/routine_task_recycler_layout_start_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="5dp"
+
+                    android:drawableLeft="@drawable/circle_red"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="11:50am"
+                    android:textColor="@color/supernova"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/routine_task_recycler_layout_end_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="5dp"
+                    android:drawableLeft="@drawable/circle_green"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="01:17pm"
+                    android:textColor="@color/blue"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="7dp"
+                android:layout_weight="2">
+
+                <ImageButton
+                    android:id="@+id/routine_task_recycler_layout_edit_imbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="false"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/routine_task_recycler_layout_delete_imbtn"
+                    android:background="@null"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/edit_icon" />
+
+                <ImageButton
+                    android:id="@+id/routine_task_recycler_layout_delete_imbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@null"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/delete_dark_icon" />
+
+                <TextView
+                    android:id="@+id/routine_task_recycler_layout_title_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/routine_task_recycler_layout_edit_imbtn"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:maxLines="1"
+                    android:text="Title"
+                    android:textColor="@color/textColor"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/routine_task_recycler_layout_note_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/routine_task_recycler_layout_title_tv"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:maxLength="72"
+
+
+                    android:text="This is the note section here you can wite notes for the upsommng routine item and hence "
+                    android:textColor="@color/secondaryTextColor"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

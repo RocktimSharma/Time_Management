@@ -1,0 +1,69 @@
+<resources>
+    <!-- Base application theme.<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/cloud_burst</item>
+        <item name="colorPrimaryDark">@color/primary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>-->
+
+    <style name="AppTheme.NoActionBar" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimaryDark">@android:color/white</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:colorEdgeEffect">@color/white</item>
+        <item name="backgroundColor">@color/port_gore</item>
+        <item name="android:statusBarColor">@color/cloud_burst</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="android:windowContentTransitions">false</item>
+    </style>
+
+    <style name="AppTheme.NoActionBarDark" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:colorEdgeEffect">@color/white</item>
+
+        <item name="android:statusBarColor">@color/mardi_gras</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+    <!---  <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog.MinWidth">
+        <item name="colorAccent">@color/primary</item>
+        <item name="android:textColor">@color/primary</item>
+    </style> -->
+    <style name="DatePickerTheme.ButtonBarNegativeButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/sunglow</item>
+    </style>
+
+    <style name="DatePickerTheme.ButtonBarButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/sunglow</item>
+    </style>
+
+    <style name="DialogTheme" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+        <item name="colorAccent">@color/zeus</item>
+        <item name="android:buttonBarButtonStyle">@style/DatePickerTheme.ButtonBarButtonStyle</item>
+    </style>
+
+
+    <style name="CustomCheckbox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="background">@drawable/checkbox_selector</item>
+        <item name="android:textColor">@color/checkbox_text_color</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="AppTheme.NoActionBar">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+
+</resources>

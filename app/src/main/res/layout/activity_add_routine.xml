@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/primaryBackgroundColor"
+    tools:context=".routines.AddRoutine">
+
+    <LinearLayout
+        android:id="@+id/add_routine_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/add_routine_cancel_imbtn"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            android:scaleType="fitStart"
+            android:src="@drawable/close_icon" />
+
+        <TextView
+            android:id="@+id/routine-txtvw"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Routine"
+            android:textColor="@color/textColor"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:autoSizeTextType="none"
+            app:fontFamily="@font/roboto_bold" />
+
+        <TextView
+            android:id="@+id/add_routine_save_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            android:gravity="right|center_vertical"
+            android:text="Save"
+            android:textColor="@color/highlightColor"
+            android:textSize="14sp"
+            app:fontFamily="@font/montserrat" />
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/add_routine_toolbar"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/add_routine_title_input_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:clickable="true"
+
+                android:hint="Title"
+                android:textColorHint="@color/secondaryTextColor"
+                app:boxStrokeColor="@color/text_input_layout_stroke_color"
+                app:boxStrokeErrorColor="@color/bittersweet"
+                app:errorIconDrawable="@drawable/ic_error"
+                app:errorTextColor="@color/bittersweet"
+                app:hintTextColor="@color/secondaryTextColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/add_routine_title_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:textColor="@color/textColor" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Repeat"
+                    android:textColor="@color/supernova"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:typeface="sans" />
+
+                <Spinner
+                    android:id="@+id/add_routine_repeat_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dialog" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/add_routine_repeat_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/add_routine_checkBox_sun"
+                    style="@style/CustomCheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/checkbox_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="Sun" />
+
+                <CheckBox
+                    android:id="@+id/add_routine_checkBox_mon"
+                    style="@style/CustomCheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/checkbox_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="Mon" />
+
+                <CheckBox
+                    android:id="@+id/add_routine_checkBox_tue"
+                    style="@style/CustomCheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/checkbox_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="Tue" />
+
+                <CheckBox
+                    android:id="@+id/add_routine_checkBox_wed"
+                    style="@style/CustomCheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/checkbox_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="Wed" />
+
+                <CheckBox
+                    android:id="@+id/add_routine_checkBox_thu"
+                    style="@style/CustomCheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/checkbox_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="Thu" />
+
+                <CheckBox
+                    android:id="@+id/add_routine_checkBox_fri"
+                    style="@style/CustomCheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/checkbox_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="Fri" />
+
+                <CheckBox
+                    android:id="@+id/add_routine_checkBox_sat"
+                    style="@style/CustomCheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/checkbox_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="Sat" />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:elevation="0dp"
+                app:cardBackgroundColor="@color/secondaryBackgroundColor"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:fontFamily="@font/montserrat"
+                        android:text="You have"
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/add_routine_time_left_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="24:00:00"
+                        android:textColor="@color/textColor"
+                        android:textSize="60sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:fontFamily="@font/montserrat"
+                        android:text="left of the day"
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/add_task_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:elevation="0dp"
+                app:cardBackgroundColor="@color/primaryBackgroundColor"
+                app:cardElevation="0dp">
+
+                <Button
+                    android:id="@+id/add_routine_add_task_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/secondaryBackgroundColor"
+                    android:drawableRight="@drawable/add_icon"
+                    android:elevation="0dp"
+                    android:gravity="fill"
+                    android:stateListAnimator="@null"
+                    android:text="Add Item"
+                    android:textColor="@color/supernova"
+                    android:textStyle="bold"
+                    android:typeface="monospace"
+                    app:backgroundTint="@null"
+                    app:elevation="0dp" />
+
+                <LinearLayout
+                    android:id="@+id/add_routine_add_task_linear_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="20dp"
+                    android:alpha="0"
+                    android:animateLayoutChanges="true"
+                    android:background="@color/secondaryBackgroundColor"
+                    android:orientation="vertical"
+                    android:translationY="-100dp"
+                    android:visibility="gone">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/add_routine_add_task_title_input_layout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="20dp"
+                        android:clickable="true"
+                        android:hint="Title"
+                        android:textColorHint="@color/secondaryTextColor"
+                        app:boxStrokeColor="@color/text_input_layout_stroke_color"
+                        app:boxStrokeErrorColor="@color/bittersweet"
+                        app:errorIconDrawable="@drawable/ic_error"
+                        app:errorTextColor="@color/bittersweet"
+                        app:hintTextColor="@color/secondaryTextColor">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/add_routine_add_task_title_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lines="1"
+                            android:maxEms="1"
+                            android:maxLength="50"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textColor="@color/textColor" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/add_routine_add_task_start_time_input_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:hint="Start Time"
+                            android:textColorHint="@color/secondaryTextColor"
+                            app:boxStrokeColor="@color/text_input_layout_stroke_color"
+                            app:boxStrokeErrorColor="@color/bittersweet"
+                            app:errorIconDrawable="@drawable/ic_error"
+                            app:errorTextColor="@color/bittersweet"
+                            app:hintTextColor="@color/secondaryTextColor">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/add_routine_add_task_start_time_et"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:clickable="true"
+                                android:editable="false"
+                                android:focusableInTouchMode="false"
+                                android:maxLines="1"
+                                android:textColor="@color/textColor" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/add_routine_aadd_task_end_time_input_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:hint="End Time"
+                            android:textColorHint="@color/secondaryTextColor"
+                            app:boxStrokeColor="@color/text_input_layout_stroke_color"
+                            app:boxStrokeErrorColor="@color/bittersweet"
+                            app:errorIconDrawable="@drawable/ic_error"
+                            app:errorTextColor="@color/bittersweet"
+                            app:hintTextColor="@color/secondaryTextColor">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/add_routine_add_task_end_time_et"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:editable="true"
+                                android:focusableInTouchMode="false"
+                                android:maxLines="1"
+                                android:textColor="@color/textColor" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:hint="Note"
+                        android:textColorHint="@color/secondaryTextColor"
+                        app:boxStrokeColor="@color/text_input_layout_stroke_color"
+                        app:boxStrokeErrorColor="@color/bittersweet"
+                        app:errorIconDrawable="@drawable/ic_error"
+                        app:errorTextColor="@color/bittersweet"
+                        app:hintTextColor="@color/secondaryTextColor">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/add_routine_add_task_note_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="top"
+                            android:lines="3"
+                            android:maxLength="75"
+                            android:maxLines="3"
+                            android:textColor="@color/textColor" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/add_routine_add_task_alarm_sw"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="Alarm"
+                        android:textColor="@color/supernova"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:thumb="@drawable/switch_thumb"
+                        android:typeface="serif"
+                        app:track="@drawable/switch_track">
+
+                    </androidx.appcompat.widget.SwitchCompat>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/add_routine_add_task_cancel_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:layout_weight="1"
+                            android:background="?android:selectableItemBackground"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="right"
+                            android:text="Cancel"
+                            android:textColor="@color/bittersweet"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/add_routine_add_task_save_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:background="?android:selectableItemBackground"
+                            android:clickable="true"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="right"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:text="Save"
+                            android:textColor="@color/highlightColor"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Routine Tasks"
+                android:textColor="@color/highlightColor"
+                android:textSize="24sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/add_routine_add_task_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:visibility="gone"
+                tools:listitem="@layout/routine_task_card" />
+
+
+            <TextView
+                android:id="@+id/add_routine_no_data_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="100dp"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:text="No Task Added"
+                android:textColor="@color/boulder"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>
+
+
+    <!---
+
+       <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/chipGroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            app:singleSelection="true">
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/add_routine_add_item_chip_rest"
+                                style="@style/CustomChipStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Rest"
+
+                                app:checkedIcon="@drawable/check_icon"
+                                app:chipIconTint="#FFFFFF"
+                                app:closeIconVisible="false" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/add_routine_add_item_chip_study"
+                                style="@style/CustomChipStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Study"
+                                app:checkedIcon="@drawable/check_icon"
+                                app:chipIconTint="#FFFFFF"
+                                app:closeIconVisible="false" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/add_routine_add_item_chip_games"
+                                style="@style/CustomChipStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Games"
+
+                                app:checkedIcon="@drawable/check_icon"
+                                app:chipIconTint="#FFFFFF"
+                                app:closeIconVisible="false" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/add_routine_add_item_chip_movie"
+                                style="@style/CustomChipStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Movie"
+                                app:checkedIcon="@drawable/check_icon"
+                                app:chipIconTint="#FFFFFF"
+                                app:closeIconVisible="false" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/add_routine_add_item_chip_eatting"
+                                style="@style/CustomChipStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Eatting"
+
+                                app:checkedIcon="@drawable/check_icon"
+                                app:chipIconTint="#FFFFFF"
+                                app:closeIconVisible="false" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/add_routine_add_item_chip_work"
+                                style="@style/CustomChipStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Work"
+                                app:checkedIcon="@drawable/check_icon"
+                                app:chipIconTint="#FFFFFF"
+                                app:closeIconVisible="false" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/add_routine_add_item_chip_sleep"
+                                style="@style/CustomChipStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sleep"
+
+                                app:checkedIcon="@drawable/check_icon"
+                                app:chipIconTint="#FFFFFF"
+                                app:closeIconVisible="false" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/add_routine_add_item_chip_training"
+                                style="@style/CustomChipStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Training"
+                                app:checkedIcon="@drawable/check_icon"
+                                app:chipIconTint="#FFFFFF"
+                                app:closeIconVisible="false" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/add_routine_add_item_chip_family"
+                                style="@style/CustomChipStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Family"
+
+                                app:checkedIcon="@drawable/check_icon"
+                                app:chipIconTint="#FFFFFF"
+                                app:closeIconVisible="false" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/add_routine_add_item_chip_housework"
+                                style="@style/CustomChipStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Housework"
+                                app:checkedIcon="@drawable/check_icon"
+                                app:chipIconTint="#FFFFFF"
+                                app:closeIconVisible="false" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/add_routine_add_item_chip_travel"
+                                style="@style/CustomChipStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Travel"
+                                app:checkedIcon="@drawable/check_icon"
+                                app:chipIconTint="#FFFFFF"
+                                app:closeIconVisible="false" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/add_routine_add_item_chip_hangout"
+                                style="@style/CustomChipStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Hangout"
+                                app:checkedIcon="@drawable/check_icon"
+                                app:chipIconTint="#FFFFFF"
+                                app:closeIconVisible="false" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/add_routine_add_item_chip_other"
+                                style="@style/CustomChipStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:text="Others"
+                                app:checkedIcon="@drawable/check_icon"
+                                app:chipIconTint="#FFFFFF"
+                                app:closeIconVisible="false" />
+
+
+
+        </com.google.android.material.chip.ChipGroup>
+
+
+    -->

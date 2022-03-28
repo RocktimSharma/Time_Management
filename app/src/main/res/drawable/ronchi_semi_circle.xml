@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/ronchi"></solid>
+    <size
+        android:width="50dp"
+        android:height="100dp"></size>
+
+    <corners
+        android:bottomRightRadius="50dp"
+        android:topRightRadius="50dp"></corners>
+</shape>

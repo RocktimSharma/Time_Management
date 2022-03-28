@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- The bottom layer is blue square.-->
+
+
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="2dp"
+                android:left="1dp"
+                android:right="1dp"
+                android:top="1dp" />
+
+            <solid android:color="@color/electric_violet" />
+        </shape>
+    </item>
+    <!--
+     <item>
+         <shape>
+             <padding android:top="1dp" android:right="1dp" android:bottom="2dp" android:left="1dp" />
+             <corners android:radius="10dp" />
+             <solid android:color="#10CCCCCC" />
+         </shape>
+     </item>
+     <item>
+         <shape>
+             <padding android:top="1dp" android:right="1dp" android:bottom="2dp" android:left="1dp" />
+             <corners android:radius="10dp" />
+             <solid android:color="#20CCCCCC" />
+         </shape>
+     </item>
+     <item>
+         <shape>
+             <padding android:top="1dp" android:right="1dp" android:bottom="2dp" android:left="1dp" />
+             <corners android:radius="10dp" />
+             <solid android:color="#30CCCCCC" />
+         </shape>
+     </item>
+     <item>
+         <shape>
+             <padding android:top="1dp" android:right="1dp" android:bottom="2dp" android:left="1dp" />
+             <corners android:radius="10dp" />
+             <solid android:color="#50CCCCCC" />
+         </shape>
+     </item> -->
+
+    <!-- Background -->
+    <item
+        android:left="10dp"
+        android:top="10dp">
+        <shape android:shape="oval">
+
+            <size
+                android:width="2dp"
+                android:height="2dp"></size>
+
+            <solid android:color="@color/dodger_blue" />
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+
+
+    <item
+        android:left="20dp"
+        android:top="20dp">
+        <shape android:shape="oval">
+
+            <size
+                android:width="2dp"
+                android:height="2dp"></size>
+
+            <solid android:color="@color/dodger_blue" />
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+
+</layer-list>

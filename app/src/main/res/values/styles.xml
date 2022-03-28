@@ -1,0 +1,55 @@
+<resources>
+
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimaryDark">@color/primaryBackgroundColor</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:colorEdgeEffect">@color/primaryBackgroundColor</item>
+        <item name="backgroundColor">@color/primaryBackgroundColor</item>
+        <item name="android:statusBarColor">@color/primaryBackgroundColor</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:textColorSecondary">@color/textColor</item>
+        <item name="android:windowContentTransitions">false</item>
+    </style>
+
+    <style name="DatePickerTheme.ButtonBarNegativeButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/bittersweet</item>
+    </style>
+
+    <style name="DatePickerTheme.ButtonBarButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/supernova</item>
+    </style>
+
+    <style name="DialogTheme" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+        <item name="colorAccent">@color/primaryBackgroundColor</item>
+        <item name="android:buttonBarButtonStyle">@style/DatePickerTheme.ButtonBarButtonStyle</item>
+    </style>
+
+
+    <!-- for text -->
+    <style name="AppTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textColor">@color/textColor</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+
+    <style name="CustomCheckbox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="background">@drawable/checkbox_selector</item>
+        <item name="android:textColor">@color/checkbox_text_color</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="AppTheme.NoActionBar">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/primaryBackgroundColor</item>
+    </style>
+
+
+</resources>

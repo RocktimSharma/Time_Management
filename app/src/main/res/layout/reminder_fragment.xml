@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryBackgroundColor"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/reminder_frag_relative_layout_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/reminder_frag_monthYear_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserrat"
+            android:text="September"
+            android:textColor="@color/textColor"
+            android:textSize="30sp" />
+
+        <ImageButton
+            android:id="@+id/reminder_frag_previous_week_action_imbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toLeftOf="@id/reminder_frag_next_week_action_imbtn"
+            android:background="@null"
+            android:paddingTop="10dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="10dp"
+            app:srcCompat="@drawable/ic_baseline_arrow_left" />
+
+        <ImageButton
+            android:id="@+id/reminder_frag_next_week_action_imbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@null"
+            android:paddingLeft="2dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            app:srcCompat="@drawable/ic_baseline_arrow_right" />
+
+        <GridLayout
+            android:id="@+id/reminder_frag_grid_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reminder_frag_monthYear_tv"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/reminder_frag_sun_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:text="Sun"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/reminder_frag_mon_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:text="Mon"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/reminder_frag_tue_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:layout_columnWeight="1"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:text="Tue"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/reminder_frag_wed_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="3"
+                android:layout_columnWeight="1"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:text="Wed"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/reminder_frag_thu_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="4"
+                android:layout_columnWeight="1"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:text="Thu"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/reminder_frag_fri_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="5"
+                android:layout_columnWeight="1"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:text="Fri"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/reminder_frag_sat_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="6"
+                android:layout_columnWeight="1"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:text="Sat"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="10sp" />
+
+        </GridLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/reminder_frag_calender_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reminder_frag_grid_layout"
+            android:layout_centerHorizontal="true"
+
+
+            android:paddingLeft="23dp"
+            tools:listitem="@layout/calendar_cell">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reminder_frag_relative_layout_1">
+
+        <TextView
+            android:id="@+id/reminder_frag_your_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/montserrat"
+            android:text="My"
+            android:textColor="@color/highlightColor"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/reminder_frag_reminder_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reminder_frag_your_tv"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Reminders"
+            android:textColor="@color/textColor"
+            android:textSize="30sp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/reminder_frag_add_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/blue"
+            android:clickable="true"
+            app:backgroundTint="@color/blue"
+            app:srcCompat="@drawable/add_icon" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/reminder_frag_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reminder_frag_reminder_tv"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

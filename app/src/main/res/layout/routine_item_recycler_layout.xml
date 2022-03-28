@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/add_routine_item_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_margin="20dp"
+
+    android:alpha="1"
+    android:orientation="vertical"
+    app:cardElevation="5dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="1">
+
+        <LinearLayout
+            android:id="@+id/add_routine_item_linear_layout_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/routine_item_recycler_chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+
+                    android:checked="true"
+                    android:text="Others"
+                    android:textColor="@color/cod_gray"
+                    app:checkedIcon="@drawable/check_icon"
+                    app:checkedIconVisible="true"
+                    app:chipBackgroundColor="@color/sunglow"
+                    app:chipIconTint="@color/cod_gray"
+                    app:closeIconVisible="false"
+
+
+                    app:textEndPadding="3dp"
+                    app:textStartPadding="5dp" />
+
+                <ImageButton
+                    android:id="@+id/routine_item_recycler_block_notification_imbtn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="false"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@id/routine_item_recycler_alarm_imbtn"
+                    android:background="@drawable/circle_gradient"
+                    app:srcCompat="@drawable/block_notification_icon" />
+
+                <ImageButton
+                    android:id="@+id/routine_item_recycler_alarm_imbtn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/circle_gradient"
+                    app:srcCompat="@drawable/alarm_icon" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/routine_item_recycler_title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Title"
+                android:textColor="@color/cod_gray"
+                android:textSize="27sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="2"
+                android:background="@drawable/rounded_rectangle"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingTop="8dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:id="@+id/routine_item_recycler_date_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text="12/12/21"
+                    android:textColor="@color/cod_gray"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/routine_item_recycler_time_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text="12:30am"
+                    android:textColor="@color/cod_gray"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/routine_item_recycler_note_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/roboto_light"
+                android:maxLines="3"
+                android:text="TextView"
+                android:textColor="@color/grey" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

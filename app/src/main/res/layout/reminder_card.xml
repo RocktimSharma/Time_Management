@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/reminder_card_cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:elevation="0dp"
+    app:cardBackgroundColor="@color/secondaryBackgroundColor"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="-30dp"
+            android:layout_marginBottom="-30dp"
+            app:srcCompat="@drawable/yellow_circle" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="-40dp"
+            android:layout_marginRight="-20dp"
+            app:srcCompat="@drawable/blue_circle" />
+
+
+        <TextView
+            android:id="@+id/reminder_card_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@id/reminder_card_edit_imbtn"
+            android:ellipsize="end"
+            android:fontFamily="@font/montserrat"
+            android:maxLines="1"
+            android:text="Title"
+            android:textColor="@color/textColor"
+            android:textSize="22sp" />
+
+        <ImageButton
+            android:id="@+id/reminder_card_edit_imbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentRight="false"
+            android:layout_margin="10dp"
+            android:layout_toLeftOf="@id/reminder_card_delete_imbtn"
+            android:background="@null"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/edit_icon" />
+
+        <ImageButton
+            android:id="@+id/reminder_card_delete_imbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/delete_dark_icon" />
+
+        <TextView
+            android:id="@+id/reminder_card_time_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reminder_card_title_tv"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="05:17 AM"
+            android:textColor="@color/secondaryTextColor"
+            android:textSize="30sp" />
+
+
+        <TextView
+            android:id="@+id/reminder_card_note_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reminder_card_time_tv"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/montserrat"
+            android:maxLength="72"
+            android:text="This is the note section of maximum two line not ,more than two line is allowed for two line"
+            android:textColor="@color/secondaryTextColor"
+            android:textSize="12sp" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

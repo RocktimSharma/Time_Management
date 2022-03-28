@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+
+
+        android:angle="315"
+        android:centerColor="@color/mine_shaft_light"
+        android:endColor="@color/mine_shaft"
+
+        android:startColor="@color/cod_gray">
+
+    </gradient>
+
+    <corners android:radius="10dp"></corners>
+</shape>
