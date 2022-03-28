@@ -12,5 +12,12 @@ The application comes with the following features:
   4.Track Daily Activities with the help of Routines
   
 **Splash Screen**
-  ![alt text](https://drive.google.com/file/d/1OlpvUx5fVgTLnQ-7kSUvrfrXRAc8awh0/view?usp=sharing)
+  ![alt splash screen](https://drive.google.com/uc?export=view&id=1OlpvUx5fVgTLnQ-7kSUvrfrXRAc8awh0)
   
+
+  
+**Reminder Screen**
+![alt reminder screen](https://drive.google.com/uc?export=view&id=1-JGDfA5zRhPpictToRx45kT_jB88lwdZ)
+
+**Routine Screen**
+![alt routine screen](https://drive.google.com/uc?export=view&id=17cJs67BoH66o3FrBxXIjJ0sZydfDLy8l)
